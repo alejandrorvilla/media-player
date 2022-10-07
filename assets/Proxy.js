@@ -18,9 +18,10 @@ const handler = {
 
 const proxy = new Proxy(target, handler);
 
-//console.log(`Obteniendo blue: ${proxy.blue}`);
-//console.log(`Obteniendo bluw: ${proxy.bluw}`);
-
+console.log("------ Test Proxy ------");
+console.log(`Obteniendo blue: ${proxy.blue}`);
+console.log(`Obteniendo bluw: ${proxy.bluw}`);
+console.log("------------------------");
 
 function* fibonacci() {
 	let a = 1;

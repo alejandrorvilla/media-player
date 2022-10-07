@@ -5,12 +5,12 @@ import LoremIpsum from "./LoremIpsum.js";
 import Singleton from "./singleton";
 
 const video = document.querySelector("video");
-const btnPlay = document.getElementById("play");
-const btnMute = document.getElementById("mute");
-const btnCancel = document.getElementById("cancelLoad");
+const btnPlay = document.querySelector("#play");
+const btnMute = document.querySelector("#mute");
+const btnCancel = document.querySelector("#cancelLoad");
 
-//const loremIpsum = new LoremIpsum(document.getElementById("lorempIpsum"));
-//loremIpsum.render();
+const loremIpsum = new LoremIpsum(document.querySelector("#lorempIpsum"));
+loremIpsum.render();
 
 const player = new MediaPlayer({
   el: video,
@@ -26,16 +26,18 @@ const player = new MediaPlayer({
 };
 
 (btnCancel as HTMLElement).onclick = () => {
-	//loremIpsum.cancelLoad();
+	loremIpsum.cancelLoad();
 }
 
-if('serviceWorker' in navigator) {
+/*if('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js').catch(error => {
 		console.error(error.message);
 	})
-}
+}*/
 
 const a = Singleton.getInstance()
 const b = Singleton.getInstance()
 
-console.log("a === b?", a === b)
+console.log("------------ Test Singleton ------------");
+console.log(`Instancia a === Instancia b? ${a === b}`);
+console.log("----------------------------------------");

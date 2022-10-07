@@ -143,8 +143,11 @@ var handler = {
     return target[prop];
   }
 };
-var proxy = new Proxy(target, handler); //console.log(`Obteniendo blue: ${proxy.blue}`);
-//console.log(`Obteniendo bluw: ${proxy.bluw}`);
+var proxy = new Proxy(target, handler);
+console.log("------ Test Proxy ------");
+console.log("Obteniendo blue: ".concat(proxy.blue));
+console.log("Obteniendo bluw: ".concat(proxy.bluw));
+console.log("------------------------");
 
 function fibonacci() {
   var a, b;
@@ -209,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58951" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52688" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
