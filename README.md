@@ -1,7 +1,6 @@
 # media-player
 Reproductor de video. Proyecto de Estudio para profundizar en JavaScript
 
-Proyecto para estudio de Javascript
 * TypeScript.
 * IntersectionObserver, visibilitychange y visibilityState para pausar video
 * Uso de objeto Proxy.
